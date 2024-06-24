@@ -6,7 +6,8 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import cors from "cors";
 
-const app = express();
+const 
+app = express();
 
 config({
     path: "./data/config.env"
