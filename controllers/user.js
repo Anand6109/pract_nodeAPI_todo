@@ -7,6 +7,7 @@ const Home = async (req, res) => {
         success: true,
         message: "Home page"
     });
+    res.send("Home page")
 }
 
 const getAllUsers = async (req, res) => {
