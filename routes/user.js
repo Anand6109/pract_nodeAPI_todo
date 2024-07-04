@@ -4,7 +4,7 @@ import { isAuthenticated } from '../middlewares/auth.js';
 
 const router = express.Router();
 
-router.get('/', Home);
+router.get('/home', Home);
 
 router.get('/all', getAllUsers);
 
