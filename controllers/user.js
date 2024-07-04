@@ -112,28 +112,6 @@ const logout = async (req, res) => {
     }
 };
 
-const newUser = async (req, res) => {
-    try {
-        const { name, email, password } = req.body;
-
-        const user = await User.create({ name, email, password });
-
-        res.cookie("name", "firstone").json({
-            success: true,
-            message: "User created successfully",
-            user: user
-        });
-        console.log("User created successfully");
-    } catch (error) {
-        res.status(500).json({
-            success: false,
-            message: "Error creating user",
-            error: error.message
-        });
-        console.error("Error creating user:", error.message);
-    }
-}
-
 const singleUser = (req, res) => {
     try {
         res.status(200).json({
@@ -200,4 +178,4 @@ const killAll = async (req, res) => {
     }
 }
 
-export { getAllUsers, Home, newUser, singleUser, deleteUser, Register, login, logout, killAll };
+export { getAllUsers, Home, singleUser, deleteUser, Register, login, logout, killAll };
